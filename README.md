@@ -30,12 +30,12 @@ Cela permet de mieux contrôler les actions effectuées sur les objets.
 
 ### A5. Proposez un ou plusieurs constructeurs et les méthodes utiles.
 Document
-+ Document(id, titre, auteur)       
-+ estDisponible() : boolean
-+ emprunter() : void
-+ retourner() : void
-+ afficher() : void
++Document(id, titre, auteur)       
++estDisponible() : boolean
++emprunter() : void
++retourner() : void
++afficher() : void
 
 Lecteur
-+ Lecteur(numero, nom, prenom, email)
-+ afficher() : void
++Lecteur(numero, nom, prenom, email)
++afficher() : void
