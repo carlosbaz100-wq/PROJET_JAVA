@@ -1,9 +1,9 @@
 public class Lecteur {
     //attributs
-    String nom;
-    String prenom;
-    int numero;
-    String adresse;
+    private String nom;
+    private String prenom;
+    private int numero;
+    private String adresse;
 
     public Lecteur(String nom, String prenom, int numero, String adresse) {
         this.nom = nom;
