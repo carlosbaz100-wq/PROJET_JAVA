@@ -24,4 +24,4 @@ Bibliothèque	n'est pas une classe	parce que	le rôle de catalogue est joué par
     private String auteur
     private boolean disponible
 ### A4. Indiquez ce qui doit être privé et expliquez pourquoi.
-   ous les attributs des classes Lecteur et Document doivent être déclarés privés (private). Cela permet de respecter le principe d'encapsulation en programmation orientée objet. Les données sont ainsi protégées contre les modifications directes et incontrôlées depuis d'autres classes. L'accès aux attributs se fait alors à travers des méthodes publiques.
+   Tous les attributs des classes Lecteur et Document doivent être déclarés privés (private). Cela permet de respecter le principe d'encapsulation en programmation orientée objet. Les données sont ainsi protégées contre les modifications directes et incontrôlées depuis d'autres classes. L'accès aux attributs se fait alors à travers des méthodes publiques.
