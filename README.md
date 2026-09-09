@@ -11,3 +11,11 @@ Adhérentest une classe parce qu'il a des données propres et interagit avec les
 Emprunt n'est pas une classe	parce qu'il	n'a pas de dates ni d'historique
 
 Bibliothèque	n'est pas une classe	parce que	le rôle de catalogue est joué par Main 
+### A3. Pour chaque classe retenue, proposez les attributs et leurs types.
+###### Lectur: 
+    private String nom
+    private String prenom
+    private int numero
+    private String adresse
+###### Document:
+     
