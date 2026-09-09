@@ -18,7 +18,7 @@ Bibliothèque	n'est pas une classe	parce que	le rôle de catalogue est joué par
     private int numero
     private String adresse
 ###### Document:
-     private int id
+    private int id
     private String titre
     private String auteur
     private boolean disponible
