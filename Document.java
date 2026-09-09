@@ -13,10 +13,6 @@ public class Document {
     }
 
 
-    public boolean estDisponible() {
-        return disponible;
-    }
-
     public void emprunter() {
         disponible = false;
     }
