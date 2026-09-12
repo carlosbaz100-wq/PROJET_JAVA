@@ -21,12 +21,8 @@ public class Document {
         disponible = true;
     }
 
-    public void afficher() {
-        System.out.println("Document n°" + id +" titre "+ titre +" auteur " + auteur);
-        if (disponible) {
-            System.out.println("Disponible");
-        } else {
-            System.out.println("Indisponible");
-        }
+   @Override
+    public String toString() {
+        return "Document n° " + numero + "Titre : " + titre + " Auteur : " + auteurPrincipal+ ".";
     }
 }
