@@ -2,38 +2,39 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // Création des documents
-        Document d1 = new Document(101, "Les Miserables", "Victor Hugo");
-        Document d2 = new Document(102, "L'Etranger", "Albert Camus");
+        // Création des documents demandés
+        Document L1 = new Livre(101, "Introduction à Java", "Kathy Sierra", 320);
+        Document L2 = new Periodique(202, "Science et technique", "Philippe Ribeau-Gésippe", 12);
 
-        // Création des lecteurs
-        Lecteur a1 = new Lecteur("Moussa", "Kone", 1234, "Kaya");
-        Lecteur a2 = new Lecteur("Amed", "Traore", 12345, "Ouaga");
+        Lecteur a1 = new Lecteur("KOUSSE", "SOULEY", 123465, "CIV");
+        Lecteur a2 = new Lecteur("BAZONGO", "CARLOS", 1234567, "Ouagadougou");
 
-        //  Affichage de tous les documents
-        System.out.println("Affichage des Documents ");
-        d1.afficher();
-        d2.afficher();
+        // Affichage des documents
+        System.out.println("Les documents creés");
+        System.out.println(L1);
+        System.out.println(L2);
 
-        //  Affichage de tous les lecteurs
-        System.out.println(" Affichage des Lecteurs ");
-        a1.afficher();
-        a2.afficher();
 
-        // Emprunt de d1 par a1
-        System.out.println(" Emprunt d'un document");
-        if (d1.estDisponible()) {
-            d1.emprunter();
+        //  Vérification des durées
+        System.out.println("\nVérification des durées");
+        System.out.println("Durée max livre      : " + L1.dureeMaxPret() + " jours");
+        System.out.println("Durée max périodique : " + L2.dureeMaxPret() + " jours");
+
+        // Vérification disponibilité
+        System.out.println("\n Disponibilité initiale ");
+        System.out.println(L1.getTitre()+"     : " + L1.getDisponible());
+        System.out.println(L2.getTitre()+ ": " + L2.getDisponible());
+
+        // Emprunt du livre
+        System.out.println("\n Emprunt du livre ");
+        if (L1.getDisponible()) {
+            L1.emprunter(a1);
+            System.out.println(L1.getEmprunteur().getNom()+" emprunte " +L1.getTitre()+" : disponibilite actualisée du document : " + L1.getDisponible());
         }
-        else {
-            System.out.println("document indisponible.");
-        }
-        d1.afficher();
 
-
-        //  Retour du document
-        System.out.println("Retour d'un Document");
-        d1.retourner();
-        d1.afficher();
+        //  Retour du livre
+        System.out.println("\n Retour du livre ");
+        L1.retourner();
+        System.out.println(L1.getTitre()+" :  disponibilite actualisée du document : " + L1.getDisponible());
     }
 }
