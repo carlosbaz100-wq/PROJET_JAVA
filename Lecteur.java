@@ -1,27 +1,42 @@
+
 public class Lecteur {
-    //attributs
-    String nom;
-    String prenom;
-    int numero;
-    String adresse;
+
+    private String nom;
+    private String prenom;
+    private int numero;
+    private String adresse;
+
 
     public Lecteur(String nom, String prenom, int numero, String adresse) {
         this.nom = nom;
         this.prenom = prenom;
         this.numero = numero;
         this.adresse = adresse;
-
     }
 
-    public String getNom(){
+    public String getNom() {
+
         return nom;
     }
 
-    public String getPrenom(){
+    public String getPrenom() {
+
         return prenom;
     }
-    public void afficher() {
-        System.out.println("Adherent n°" + numero + " : " + nom + " " + prenom);
+
+    public int getNumero() {
+
+        return numero;
     }
 
+    public String getAdresse() {
+
+        return adresse;
+    }
+
+    @Override
+    public String toString() {
+
+        return "Lecteur " + prenom + " " + nom + " numero " + numero + " adresse " + adresse;
+    }
 }
