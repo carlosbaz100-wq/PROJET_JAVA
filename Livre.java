@@ -1,17 +1,33 @@
-public class Livre extends Document {
-    private int nbPages;
+public class Livre extends Document implements Empruntable {
 
-    public Livre(int numero, String titre, String auteurPrincipal, int nbPages) {
-        super(numero, titre, auteurPrincipal);
-        this.nbPages = nbPages;
+    private String auteur;
+
+    public Livre(int id, String titre, String auteur) {
+        super(id, titre);
+        if (auteur == null || auteur.isBlank()) {
+            throw new IllegalArgumentException("auteur invalide");
+        }
+        this.auteur = auteur;
     }
 
     @Override
-    public int dureeMaxPret() {
-        return 21;
+    public void emprunter() {
+        if (!estDisponible()) {
+            throw new IllegalStateException("livre indisponible");
+        }
+        changerDisponibilite(false);
     }
 
-    @Override public String toString() {
-        return super.toString() + "\nPages : " + nbPages + "Durée max prêt : " + dureeMaxPret() + " jours";
+    @Override
+    public void retourner() {
+        if (estDisponible()) {
+            throw new IllegalStateException("livre deja disponible");
+        }
+        changerDisponibilite(true);
+    }
+
+    @Override
+    public String description() {
+        return "Livre n°" + getId() + " : " + getTitre() + " - " + auteur + " (disponible : " + estDisponible() + ")";
     }
 }
