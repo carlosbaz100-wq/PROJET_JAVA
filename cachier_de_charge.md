@@ -130,7 +130,7 @@ Autrement dit : le système ne se contente pas d'enregistrer les actions du bibl
 
 | Fichier Java | Type | Rôle dans la solution | Contribution |
 |---|---|---|---|
-| `Empruntable.java` | Interface | Capacité « peut être emprunté » (Livres uniquement) | BAZONGO Carlos |
+| `Empruntable.java` | Interface | Capacité « peut être emprunté » (Livres uniquement) | DAMBA Aimée |
 | `Consultable.java` | Interface | Capacité « peut être consulté sur place » (Périodiques uniquement) | KOUSSE Souleymane |
 | `Document.java` | Classe abstraite | Socle commun : `id`, `titre`, `disponible`, `description()` abstraite | KOUSSE Souleymane |
 | `Livre.java` | Classe concrète | Étend `Document`, implémente `Empruntable` | DAMBA Aimée |
